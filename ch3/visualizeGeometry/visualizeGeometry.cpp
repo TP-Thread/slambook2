@@ -1,11 +1,9 @@
 #include <iostream>
 #include <iomanip>
-
 using namespace std;
 
 #include <Eigen/Core>
 #include <Eigen/Geometry>
-
 using namespace Eigen;
 
 #include <pangolin/pangolin.h>

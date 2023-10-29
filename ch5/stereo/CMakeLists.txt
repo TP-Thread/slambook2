@@ -1,4 +1,15 @@
+cmake_minimum_required(VERSION 3.0)
+project(stereoVision)
+# 设置可执行文件的名称和源文件
+add_executable(stereoVision stereoVision.cpp)
+
+# 查找并加载OpenCV，设置OpenCV_INCLUDE_DIRS、OpenCV_LIBRARIES等变量
+find_package(OpenCV REQUIRED)
 find_package(Pangolin REQUIRED)
 
-add_executable(stereoVision stereoVision.cpp)
-target_link_libraries(stereoVision ${OpenCV_LIBS} ${Pangolin_LIBRARIES})
+# 设置头文件路径
+include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(${Pangolin_INCLUDE_DIRS})
+
+# 链接库到可执行文件
+target_link_libraries(stereoVision ${OpenCV_LIBRARIES} ${Pangolin_LIBRARIES})

@@ -2,6 +2,7 @@
     "files.associations": {
         "core": "cpp",
         "dense": "cpp",
-        "lu": "cpp"
+        "lu": "cpp",
+        "chrono": "cpp"
     }
 }
